@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #c48424;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+      }
+
+      img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        border: 3px solid gray;
+      }
+
+      .container {
+        max-width: 400px;
+        margin: 50px auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hello There!</h1>
+      <div><img src="Image/icon.jpg" alt="photo"></div>
+      <button onclick="chat()">Click Me!</button>
+    </div>
+
+    <script>
+      document.getElementById("chatButton");
+
+      function chat() {
+        // Greet the User
+        alert("Hello!");
+
+        // Ask the user for their name
+        var yourName = prompt("What is your name?");
+
+        // Ask user what their favorite food is
+        var food = prompt("What is your favorite food?");
+        alert("I like " + food + ", too");
+
+        // Ask user if they would like to share their food
+        var shareFood = confirm("Let's eat?");
+
+        // If the user clicks "OK"
+        if (shareFood === true) {
+          alert("Thank you!");
+        }
+
+        // If the user clicks "cancel"
+        else {
+          alert("See you next time!");
+        }
+      }
+    </script>
+  </body>
+</html>
